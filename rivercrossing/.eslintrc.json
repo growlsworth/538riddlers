@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb/base"],
+  "rules" : {
+    // change from airbnb version to allow function args exist even when not used
+    // http://eslint.org/docs/rules/no-unused-vars.html
+    "no-unused-vars": [2, {"vars": "local", "args": "none"}],
+    // having function names is annoying in every scenario
+    // http://eslint.org/docs/rules/func-names.html
+    "func-names": [0],
+    // just not a fan of max-lenth
+    // http://eslint.org/docs/rules/max-len.html
+    "max-len": [0],
+    // TODO: too many of these to address now
+    // also this is kinda how sequelize works: Model.find().then(model => { model.name = params.name; return model.save(); })
+    // http://eslint.org/docs/rules/no-param-reassign.html
+    "no-param-reassign": [0]
+  },
+  "env": {
+    "es6": true
+  }
+}
